@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,600&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root {
+    --size: 10px;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-image: linear-gradient(to left, #000000, #222831);
+    font-family: 'Newsreader', serif;
+    font-size: 1.5rem;
+
+}
+.dog-container {
+    background-image: url("./image/dog.jpg");
+    width: calc(20 * var(--size));
+    height: calc(20 * var(--size));
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+}
+.dog-container::before, .dog-container::after {
+    --scale: 0;
+    --arrow-size: 13px;
+
+    position: absolute;
+    top: -.50rem;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    left: 50%;
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+.dog-container::before {
+     --translate-y: calc(-100% - var(--arrow-size));
+
+     content: attr(data-tooltip);
+     width: max-content;
+     padding: .7rem;
+     border-radius: .5rem;
+     background-color: #ff75a0;
+     text-align: center;
+     max-width: 100%;
+}
+.dog-container:hover::before, .dog-container:hover::after {
+     --scale: 1;
+}
+.dog-container::after {
+    --translate-y: calc(-1 * var(--arrow-size));
+
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-top-color: #ff75a0;
+    transform-origin: top center;
+}
+
+/* Baby Tiger..................................................................... CSS*/
+
+.tiger-container {
+    background-image: url("./image/babytiger.jpg");
+    width: calc(25 * var(--size));
+    height: calc(25 * var(--size));
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 80px;
+    left: 90px;
+}
+.tiger-container::before, .tiger-container::after {
+    --scale: 0;
+    --arrow-size: 13px;
+
+    position: absolute;
+    top: -.25rem;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    left: 15%;
+    transition: 150ms transform;
+    transform-origin: bottom right;   
+}
+.tiger-container::before {
+    --translate-y: calc(-100% - var(--arrow-size));
+
+    content: attr(data-tooltip);
+    width: max-content;
+    padding: .8rem;
+    border-radius: .5rem;
+    background-color: greenyellow;
+    text-align: center;
+    max-width: 100%;
+}
+.tiger-container:hover::before, .tiger-container:hover::after {
+    --scale: 1;
+}
+.tiger-container::after {
+   --translate-y: calc(-1 * var(--arrow-size));
+
+   content: '';
+   border: var(--arrow-size) solid transparent;
+   border-top-color: greenyellow;
+   transform-origin: top right;
+   left: 35%;
+}
+
+
+
+/* Baby Panda ........................................Css */
+.panda-container {
+    background-image: url("./image/panda.jpg");
+    width: calc(25 * var(--size));
+    height: calc(25 * var(--size));
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 75px;
+    right: 90px;
+} 
+.panda-container::before, .panda-container::after {
+    --scale: 0;
+    --arrow-size: 13px;
+
+    position: absolute;
+    top: -.25rem;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    left: 85%;
+    transition: 150ms transform;
+    transform-origin: bottom left;   
+}
+.panda-container::before {
+    --translate-y: calc(-100% - var(--arrow-size));
+
+    content: attr(data-tooltip);
+    width: max-content;
+    padding: .8rem;
+    border-radius: .5rem;
+    background-color: #f88f01;
+    text-align: center;
+    max-width: 100%;
+}
+.panda-container:hover::before, .panda-container:hover::after {
+    --scale: 1;
+}
+.panda-container::after {
+   --translate-y: calc(-1 * var(--arrow-size));
+
+   content: '';
+   border: var(--arrow-size) solid transparent;
+   border-top-color: #f88f01;
+   transform-origin: top left;
+   left: 70%;
+}
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+    :root {
+        --size: 6px;
+    }
+    body {
+        font-size: 1rem;
+    }
+    .dog-container::before {
+        padding: .5rem;
+    }
+    
+
+}
