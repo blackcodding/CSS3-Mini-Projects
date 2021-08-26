@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+   background-image: linear-gradient(to right, #000000 ,  #010101);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+}
+.spinner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+
+}
+.spinner-text {
+    font-size: 2em;
+    
+    animation: loading-opacity 4s ease-in-out infinite;
+}
+.spinner-sector {
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: 12px solid transparent;
+    mix-blend-mode: overlay;
+}
+.spinner-sector-blue {
+    animation: rotate 2s ease-out infinite;
+   /* border-top: 12px solid rgb(99, 194, 226);*/
+   border-top: 12px solid rgb(65, 202, 248);
+}
+.spinner-sector-red {
+    animation: rotate 2.5s ease-in infinite;
+    border-top: 12px solid rgb(252, 121, 121);
+}
+.spinner-sector-green {
+    animation: rotate 1.5s ease-in-out infinite;
+    /*border-top: 12px solid rgb(109, 224, 109);*/
+    border-top: 12px solid rgb(52, 223, 52);
+}
+@keyframes rotate {
+    from { transform: rotate(0);}
+    to { transform: rotate(360deg);}
+}
+@keyframes loading-opacity {
+    0% , 100% {
+        opacity: 1;
+        color: #fa1e0e;
+    }
+    25% , 75% {
+        opacity: .5;
+        color: #94fc13;
+    }
+    50% {
+        opacity: .25;
+        color: #2e89ff;
+    }
+}
