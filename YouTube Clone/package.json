@@ -1,0 +1,23 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "description": "simple frontend youtube clone ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackcodding/YouTube-Clone.git"
+  },
+  "keywords": [
+    "youtube",
+    "clone"
+  ],
+  "author": "supriya barai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackcodding/YouTube-Clone/issues"
+  },
+  "homepage": "https://github.com/blackcodding/YouTube-Clone#readme"
+}
