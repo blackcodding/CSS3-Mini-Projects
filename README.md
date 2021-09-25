@@ -37,7 +37,7 @@
 - Responsive and attractive UI
 - Dark theme design.
 - All browser support :)
-- WEBSITE LINK: https://blackcodding.github.io/3d-Flip-Button/
+- WEBSITE LINK: https://blackcodding.github.io/3D-Flip-Button/
 
 ### ScreenShots Below 👇
 
